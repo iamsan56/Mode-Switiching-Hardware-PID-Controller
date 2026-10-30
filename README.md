@@ -1,6 +1,5 @@
-# PS-02: Mode-Switching Hardware PID Flight Controller
+# Mode-Switching Hardware PID Flight Controller
 ## Autonomous ASIC Flight Controller (Deterministic · Bumpless · Fault-Aware)
-### VLSI Hackathon 2026 — VIT Chennai · Sponsored by Sudarshana Semiconductors
 
 [![ASIC Flow](https://img.shields.io/badge/ASIC_Flow-RTL--to--GDSII-success.svg)](https://github.com)
 [![Process](https://img.shields.io/badge/PDK-45nm_NanGate_GSCLIB045-blue.svg)](https://github.com)
