@@ -1,0 +1,48 @@
+=============================================================
+  TB: pid_controller — Stage 10 Top-Level Regression Suite
+  Host: ic312.vit.ac.in (Linux x86_64)
+  Date: Sun Oct 11 10:04:21 IST 2026
+  Tool: Cadence NCLaunch / ncsim (INCISIVE152)
+  Top Module: worklib.tb_pid_top:module
+=============================================================
+
+--- TC-01: System Reset & Initial Boot State ---
+  PASS [1] Power-on active_mode == Acro (2'b00)  got=00
+  PASS [2] Watchdog inactive on reset  got=0
+  PASS [3] Thrust initialized to baseline stick  got=0x2000
+
+--- TC-02: Simultaneous 3-Axis Acro Maneuver ---
+  PASS [4] Roll actuator active in parallel  got=0x1400
+  PASS [5] Pitch actuator active in parallel  got=0x0A00
+  PASS [6] Yaw actuator active in parallel  got=0x0500
+
+--- TC-03: Simultaneous Stabilize Mode Cascaded Tracking ---
+  PASS [7] Switched to Stabilize Mode  got=01
+  PASS [8] Roll driven by attitude loop  got=1
+  PASS [9] Pitch driven by attitude loop  got=1
+
+--- TC-04: Altitude Hold Mode Engaging Vertical Channel ---
+  PASS [10] Switched to Altitude Hold Mode  got=10
+  PASS [11] Thrust increased automatically to correct altitude error  got=1
+
+--- TC-05: Multi-Axis Predictive Bumpless Transfer ---
+  PASS [12] Roll bumpless output preserved  got=0x1400
+  PASS [13] Pitch bumpless output preserved  got=0x0A00
+
+--- TC-06: Sensor Watchdog Dropout & Synchronized Ramp ---
+  PASS [14] Master watchdog tripped!  got=1
+  PASS [15] Autonomous Failsafe engaged!  got=11
+  PASS [16] Roll safely leveled in failsafe  got=0x0000
+  PASS [17] Pitch safely leveled in failsafe  got=0x0000
+  PASS [18] Yaw rotation halted in failsafe  got=0x0000
+  PASS [19] Thrust ramped down to safe target  got=0x0800
+
+--- TC-07: Independent Axis Register Tuning ---
+  PASS [20] Pitch gain updated via register write  got=0x0450
+
+=============================================================
+  Results: 20 PASSED,  0 FAILED  (of 20 total checks)
+  >>> ALL TOP-LEVEL REGRESSION TESTS PASSED <<<
+=============================================================
+Simulation complete via $finish(1) at time 8641 NS + 0
+ncsim> exit

@@ -1,0 +1,7 @@
+Silicon Tapeout Deliverables Generated in Lab Environment (ic312.vit.ac.in):
+---------------------------------------------------------------------------
+1. Tapeout GDSII File: pnr/outputs/pid_controller.gds (104 MB)
+2. DEF Floorplan/Routing: pnr/outputs/pid_controller.def (89 MB)
+3. Post-Route Gate-Level Netlist: pnr/outputs/pid_controller_pr.v (23 MB)
+4. Synthesized Netlist: syn/outputs/pid_controller_synth.v (25 MB)
+5. Design Checkpoint Database: pnr/outputs/pid_controller_final.enc.dat/
